@@ -15,8 +15,8 @@ else input[3] = math.ceil(input[3]/3) end
 if input[1]/3/2 < math.ceil(input[1]/3/2) then input[1] = math.ceil(input[1]/3/2)+1
 else input[1] = math.ceil(input[1]/3/2) end
 
-for h=1, math.ceil(input[3]/3) do
-    for x=1, input[1]/3/2 do
+for h=1, input[3] do
+    for x=1, input[1] do
         for y=1, input[2] do
             if r.count(inventorySize) == 64 then
                 print("Я переполнен :(")
