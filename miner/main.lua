@@ -11,7 +11,7 @@ end
 if input[3]/3 < math.ceil(input[3]/3) then input[3] = math.ceil(input[3]/3)+1
 else input[3] = math.ceil(input[3]/3) end
 
-if input[1]/3/2 < math.ceil(input[1]/3/2) then input1] = math.ceil(input[1]/3/2)+1
+if input[1]/3/2 < math.ceil(input[1]/3/2) then input[1] = math.ceil(input[1]/3/2)+1
 else input[1] = math.ceil(input[1]/3/2) end
 
 for h=1, math.ceil(input[3]/3) do
