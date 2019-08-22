@@ -12,7 +12,7 @@ end
 for h=1, input[3] do
     for x=1, input[2] do
         for y=1, input[1] do
-            r.swing(0)
+            r.swingDown()
             for i=1, 3 do r.forward() end
         end
         for y=input[1], 1, -1 do
