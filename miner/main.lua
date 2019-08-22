@@ -4,8 +4,9 @@ inventorySize = r.inventorySize()
 input = {}
 print("x,y,h :")
 text = io.read()
-for data in text:gmatch('^[%s]+') do
+for data in text:gmatch('[^%s]+') do
     input[#input+1] = tonumber(data)
+    print(tonumber(data))
 end
 
 if input[3]/3 < math.ceil(input[3]/3) then input[3] = math.ceil(input[3]/3)+1
