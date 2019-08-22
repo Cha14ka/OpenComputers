@@ -22,4 +22,5 @@ for h=1, input[3] do
         for i=1, 3 do r.forward() end
         r.turnLeft()
     end
+    for i=1, 3 do r.down() end
 end
