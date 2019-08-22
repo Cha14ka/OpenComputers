@@ -25,6 +25,6 @@ for h=1, input[3] do
         r.turnRight()
         for i=1, 3 do r.swing() r.forward() end
         r.turnLeft()
-    end
+    end 
     for i=1, 3 do r.down() end
 end
