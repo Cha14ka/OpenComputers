@@ -52,7 +52,8 @@ for h=1, input[3] do
                 r.forward()
             else r.forward() end
         end
-
+        
+        r.back()
         r.back()
         if r.detect() then
             r.swing()
