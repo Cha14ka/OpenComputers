@@ -33,7 +33,7 @@ for h=1, math.ceil(input[3]/3) do
             r.forward()
         end
         r.turnRight()
-        for 1,3 do 
+        for _=1,3 do 
             if r.detect() then
                 r.swing()
                 r.forward()
@@ -58,7 +58,7 @@ for h=1, math.ceil(input[3]/3) do
             r.left()
         else r.left() end
         r.turnRight()
-        for 1,3 do 
+        for _=1,3 do 
             if r.detect() then
                 r.swing()
                 r.forward()
