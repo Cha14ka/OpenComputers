@@ -16,7 +16,7 @@ for h=1, input[3] do
             for i=1, 3 do r.forward() end
         end
         for y=input[1], 1, -1 do
-            r.back()
+            for i=1, 3 do r.back() end
         end    
         r.turnRight()
         for i=1, 3 do r.forward() end
