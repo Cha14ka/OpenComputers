@@ -56,9 +56,9 @@ for h=1, input[3] do
         r.back()
         if r.detect() then
             r.swing()
-            r.left()
-        else r.left() end
-        r.turnRight()
+            r.forward()
+        else r.forward() end
+        r.turnLeft()
         for i=1,3 do 
             if r.detect() then
                 r.swing()
