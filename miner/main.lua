@@ -2,70 +2,24 @@ r = require("robot")
 inventorySize = r.inventorySize()
 
 input = {}
-print("x,y,h :")
+print("y,x,h :")
 text = io.read()
 for data in text:gmatch('[^%s]+') do
     input[#input+1] = tonumber(data)
     print(tonumber(data))
 end
 
-if input[3]/3 < math.ceil(input[3]/3) then input[3] = math.ceil(input[3]/3)+1
-else input[3] = math.ceil(input[3]/3) end
-
-if input[1]/3/2 < math.ceil(input[1]/3/2) then input[1] = math.ceil(input[1]/3/2)+1
-else input[1] = math.ceil(input[1]/3/2) end
-
 for h=1, input[3] do
-    for x=1, input[1] do
-        for y=1, input[2] do
-            if r.count(inventorySize) == 64 then
-                print("Я переполнен :(")
-                os.exit()
-            end
-            if r.detect() then
-                r.swing()
-                r.forward()
-            end
+    for x=1, input[2] do
+        for y=1, input[1] do
+            r.swing(0)
+            for i=1, 3 do r.forward() end
         end
-
-        r.back()
-        if r.detect() then
-            r.swing()
-            r.forward()
-        end
+        for y=input[1], 1, -1 do
+            r.back()
+        end    
         r.turnRight()
-        for i=1,3 do 
-            if r.detect() then
-                r.swing()
-                r.forward()
-            else r.forward() end
-        end
-        r.turnRight()
-
-        for y=1, input[2] do
-            if r.count(inventorySize) == 64 then
-                print("Я переполнен :(")
-                os.exit()
-            end
-            if r.detect() then
-                r.swing()
-                r.forward()
-            else r.forward() end
-        end
-        
-        r.back()
-        r.back()
-        if r.detect() then
-            r.swing()
-            r.forward()
-        else r.forward() end
-        r.turnLeft()
-        for i=1,3 do 
-            if r.detect() then
-                r.swing()
-                r.forward()
-            else r.forward() end
-        end
+        for i=1, 3 do r.forward() end
         r.turnLeft()
     end
 end
