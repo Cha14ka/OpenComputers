@@ -3,7 +3,7 @@ inventorySize = r.inventorySize()
 
 input = {}
 print("x,y,h :")
-text = term.read()
+text = io.read()
 for data in text:gmatch('^[%s]+') do
     input[#input+1] = tonumber(data)
 end
